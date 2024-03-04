@@ -8,7 +8,10 @@ export class ProductService {
   constructor(private readonly configService: ConfigService) {}
 
   async findOne(id: string): Promise<Product> {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({
+      // headless: false,
+      args: ['--no-sandbox'],
+    });
     const page = await browser.newPage();
 
     // URL del producto específico en Amazon que deseas scrapear
