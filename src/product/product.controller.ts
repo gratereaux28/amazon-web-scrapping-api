@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ProductService } from './product.service';
 
 @Controller('product')
@@ -8,5 +8,10 @@ export class ProductController {
   @Get(':id')
   async findOne(@Param('id') id: string) {
     return await this.productService.findOne(id);
+  }
+
+  @Get()
+  async findOneByUrl(@Query('url') url: string) {
+    return await this.productService.findOneByUrl(url);
   }
 }

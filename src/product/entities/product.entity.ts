@@ -4,4 +4,5 @@ export class Product {
   price: string;
   rating: string;
   image: string;
+  link: string;
 }

@@ -25,6 +25,8 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
+    "axios": "^1.6.8",
+    "cheerio": "1.0.0-rc.12",
     "joi": "^17.12.2",
     "puppeteer": "^22.3.0",
     "reflect-metadata": "^0.1.13",
